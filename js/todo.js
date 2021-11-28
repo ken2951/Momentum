@@ -1,4 +1,4 @@
-const toDoForm = document.querySelector("#todo-form");
+// const toDoForm = document.querySelector("#todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.querySelector("#todo-list");
 
@@ -51,4 +51,8 @@ if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
+}
+
+if (savedUsername !== null) {
+  toDoForm.classList.remove(HIDDEN_CLASSNAME);
 }
